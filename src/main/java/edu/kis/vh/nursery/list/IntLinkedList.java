@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.list;
 
 public class IntLinkedList {
 
-    public static final int RETURN = -1;
+    public static final int LIST_EMPTY = -1;
 
     Node last;
     int i;
@@ -27,13 +27,13 @@ public class IntLinkedList {
 
     public int top() {
         if (isEmpty())
-            return RETURN;
+            return LIST_EMPTY;
         return last.value;
     }
 
     public int pop() {
         if (isEmpty())
-            return RETURN;
+            return LIST_EMPTY;
         int ret = last.value;
         last = last.prev;
         return ret;
